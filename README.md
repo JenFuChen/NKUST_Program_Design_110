@@ -46,7 +46,7 @@ eval "$(pyenv init -)"
 "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}"
 ```
 
->**更改C++編譯輸出路徑**
+>**更改C++編譯輸出路徑** &emsp;
 >更改 **./&nbsp;&nbsp;/** 指定路徑
 ``` json
 "code-runner.executorMap": {
