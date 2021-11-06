@@ -6,7 +6,7 @@ C/C++ Python all here
 
 ### 環境安裝：
 終端機安裝 **pyenv** 之後，找出以下檔案並輸入指令儲存，全部儲存後重開終端機並執行  ``` 
-pyenv global 3.9.4``` 後面的數字是版本號碼
+pyenv global 3.9.4``` 數字是版本號碼
 
 > **.bash**
 ``` cmd
@@ -47,6 +47,7 @@ eval "$(pyenv init -)"
 ```
 
 >**更改C++編譯輸出路徑**
+>更改 **./&nbsp;&nbsp;/** 指定路徑
 ``` json
 "code-runner.executorMap": {
     "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
