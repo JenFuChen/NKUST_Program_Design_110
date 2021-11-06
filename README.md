@@ -4,7 +4,7 @@ C/C++ Python all here
 ---
 ## MacOS Pyenv環境建置
 
-###  <font color = #EEAD0E>環境安裝：
+### 環境安裝：
 終端機安裝 **pyenv** 之後，找出以下檔案並輸入指令儲存，全部儲存後重開終端機並執行  ``` 
 pyenv global 3.9.4``` 後面的數字是版本號碼
 
