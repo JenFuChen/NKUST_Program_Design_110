@@ -63,5 +63,10 @@
         "vector": "cpp"
     },
     //"editor.fontSize": 18,
-    "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}" //大括號不換行！
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}", //大括號不換行！
+    "code-runner.executorMap": {
+        //"c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        //"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+        "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
+    }
 }
