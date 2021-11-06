@@ -42,16 +42,18 @@ eval "$(pyenv init -)"
 
 ### 編輯器設定 Setting.json ：
 >**大括號不換行**
+```json
+"C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}" //大括號不換行！
 ```
-"C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}", //大括號不換行！
-```
+
 >**更改C++編譯輸出路徑**
 ``` json
 "code-runner.executorMap": {
-    //"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt" 原始碼
+    /"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt", 原始碼
     "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
 }
 ```
+
 >**終端機字體**
 ```
 "terminal.integrated.fontSize": 14, //字體大小設置
