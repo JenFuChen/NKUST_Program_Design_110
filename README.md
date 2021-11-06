@@ -25,7 +25,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
 > **.zsh**
-``` cmd
+```cmd
 echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
 ```
 
@@ -55,12 +55,12 @@ eval "$(pyenv init -)"
 
 >**終端機字體**
 ```json
-"terminal.integrated.fontSize": 14, //字體大小設置
+"terminal.integrated.fontSize": 14
 ```
 
 >**編輯器字體**
 ```json
-"editor.fontSize": 18, //全域程式碼字體大小
+"editor.fontSize": 18
 ```
 
 ### Error 情況：
@@ -69,10 +69,10 @@ eval "$(pyenv init -)"
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
 
-終端機執行這段  ``` cmd
+終端機執行這段  ```
 xcode-select --install```
 
-### 連結GitHub：
+### 搭配 GitHub：
 
 >**提取**
 
