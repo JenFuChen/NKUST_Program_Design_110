@@ -65,12 +65,11 @@ eval "$(pyenv init -)"
 ```
 
 ### Error 情況：
->**如果在終端機看到這串錯誤**
+>**如果在終端機看到以下這串錯誤**
+>**則執行這段```xcode-select --install```**
 ``` cmd
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
->則執行這段  ```
-xcode-select --install```
 
 ### 搭配 GitHub：
 
