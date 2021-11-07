@@ -46,8 +46,7 @@ eval "$(pyenv init -)"
 "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}"
 ```
 
->**更改C++編譯輸出路徑** &emsp;
->更改 **./&nbsp;&nbsp;/** 指定路徑
+>**更改C++編譯輸出路徑**[ 更改 **./&nbsp;&nbsp;/** 指定路徑，&&前段為輸出位址、檔案名稱，後半為終端機讀取地址 ]
 ``` json
 "code-runner.executorMap": {
     "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
@@ -65,8 +64,7 @@ eval "$(pyenv init -)"
 ```
 
 ### Error 情況：
->**如果在終端機看到以下這串錯誤**
->**則執行這段```xcode-select --install```**
+>**如果在終端機看到以下這串錯，則執行此段指令```xcode-select --install```**
 ``` cmd
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
