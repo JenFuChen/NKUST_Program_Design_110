@@ -1,27 +1,37 @@
+#include <algorithm>
 #include <iostream>
 using namespace std;
 int main() {
+    int z[99];
+    int N;
+    int a, b;
     while (1) {
-        int A;
-        int list[1] = {1};
-        float i = 7, temp = 0, num = 0;
-        scanf("%d", &A);
-        for (i = 7; i >= 0; i--) {
-            for (int j = i; j > 0; j--) {
-                list[0] = list[0] * 2;
-            }
-            if (temp + list[0] <= A) {
-                temp = temp + list[0];
-                printf("1");
-            } else {
-                printf("0");
-            }
-            list[0] = 1;
-        }
-        printf("\n");
-        if (A == 0) {
+        cin >> N;
+        if (N <= 0) {
             break;
+        } else if (N > 0) {
+            for (int i = 0; i <= N; i++) {
+                cin >> z[i];
+            }
+
+            sort(z + 1, z + N + 1);
+            if (z[0] == 1) {
+                cout << z[1] << " ";
+                a = z[1];
+                for (int i = 0; i < a; i++) {
+                    cout << "*";
+                }
+                cout << endl;
+            } else if (z[0] == 2) {
+                cout << z[N] << " ";
+                b = z[N];
+                for (int i = 0; i < b; i++) {
+                    cout << "*";
+                }
+                cout << endl;
+            }
         }
     }
+
     return 0;
 }
