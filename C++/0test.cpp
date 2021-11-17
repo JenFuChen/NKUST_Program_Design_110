@@ -1,35 +1,43 @@
 #include <stdio.h>
-#include <iostream>
-using namespace std;
-int main() {
-    int list = 0;
-    cin >> list;
-    for (int i = 0; i < list; i++) {
-        int a, b, c;
-        int max, min = 0;
-        int sum = 0;
-        int pro = 1;
-        cin >> a >> b >> c;
-        if (b > c) {
-            max = b;
-            min = c;
-        } else {
-            max = c;
-            min = b;
-        }
-        if (a == 1) {
-            for (int j = min; j <= max; j++) {
-                sum += j;
-            }
-            cout << sum << endl;
-        }
-        if (a == 2) {
-            for (int j = min; j <= max; j++) {
-                pro *= j;
-            }
-            cout << pro << endl;
-        }
-    }
 
+int main() {
+    while (1) {
+        int N;
+        scanf("%d", &N);
+        if (N <= 0) {
+            break;
+        }
+        int O, min, max;
+        scanf("%d", &O);
+        int array[N];
+        for (int i = 0; i < N; i++) {
+            scanf("%d", &array[i]);
+        }
+        if (O == 1) {
+            min = array[0];
+            for (int i = 1; i < N; i++) {
+                if (min > array[i]) {
+                    min = array[i];
+                }
+            }
+            printf("%d", min);
+            for (int i = 1; i <= min; i++) {
+                printf("*");
+            }
+        }
+        if (O == 2) {
+            max = array[0];
+            for (int i = 1; i < N; i++) {
+                if (max < array[i]) {
+                    max = array[i];
+                }
+            }
+            printf("%d", max);
+            for (int i = 1; i <= max; i++) {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
     return 0;
 }
