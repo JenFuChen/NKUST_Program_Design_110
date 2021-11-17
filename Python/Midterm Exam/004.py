@@ -7,7 +7,7 @@ while(1):
     T2 = '#'
     line = num
     for i in range(num,0,-1):
-        cnt = 2*i -1 - 2
+        cnt = 2*i -3
         if(i==num):
             for k in range(num):
                 print(T1,end = " ")
