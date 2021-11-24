@@ -4,23 +4,30 @@
 using namespace std;
 int main() {
     while (1) {
-        int N, k;
+        int N, x, y, k;
         cin >> N;
         if (N > 9 || N < 1) {
             break;
         }
-        for (int i = 0; i < 2 * N - 1; i++) {
-            if (i < N) {
-                k = i;
-            } else {
-                k = 2 * (N - 1) - i;
+        for (int i = 1; i < 2 * N; i++) {
+            for (int j = 1; j < 2 * N; j++) {
+                x = 0;
+                y = 0;
+                if (i >= N)
+                    y = i - N;
+                else
+                    y = N - i;
+
+                if (j >= N)
+                    x = j - N;
+                else
+                    x = N - j;
+                if (y >= x)
+                    k = y;
+                else
+                    k = x;
+                printf("%d", k + 1);
             }
-            for (int j = 0; j < k; j++)
-                printf("%d", N - j);
-            for (int j = 0; j < 2 * (N - k) - 1; j++)
-                printf("%d", N - k);
-            for (int j = k - 1; j >= 0; j--)
-                printf("%d", N - j);
             printf("\n");
         }
     }
