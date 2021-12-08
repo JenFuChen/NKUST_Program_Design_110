@@ -2,14 +2,9 @@
 #include <iostream>
 using namespace std;
 void tree(int level) {
-    int L1, L2, L3 = 0;
-    L1 = level;
-    L2 = L1 + level;
-    L3 = L2 + L1;
-    printf("%d %d %d\n", L1, L2, L3);
-    /*for (int m = 1; m <= 3; m++) {
+    for (int m = 1; m <= 3; m++) {
         for (int i = 0; i < level * m; i++) {
-            for (int j = i; j < L3 - 1; j++) {
+            for (int j = i; j < 3 * level - 1; j++) {
                 printf("^");
             }
             for (int k = 0; k <= i; k++) {
@@ -17,7 +12,7 @@ void tree(int level) {
             }
             printf("\n");
         }
-    }*/
+    }
     return;
 }
 int main() {
@@ -28,12 +23,14 @@ int main() {
             break;
         }
         if (func1 == 1) {
-            int side1;
-            side1 = 2 * level - 1;
-            for (int x = 0; x < side1; x++) {
-                for (int y = 0; y < side1; y++) {
+            for (int x = 1; x < 2 * level; x++) {
+                for (int y = 1; y < 2 * level; y++) {
                     printf("(%d,%d)", x, y);
+                    if (x == y) {
+                        printf("\\  ");
+                    }
                 }
+                printf("\n");
             }
         }
         if (func1 == 2) {
@@ -41,3 +38,4 @@ int main() {
         }
         return 0;
     }
+}
