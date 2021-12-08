@@ -34,7 +34,7 @@ void amulet(int level) {
                     printf("&");  //上
                 }
                 if ((x + y) > cnt + 1) {
-                    printf("#");  //右
+                    printf("$");  //右
                 }
             } else if ((x - y) > 0) {
                 if ((x + y) < cnt + 1) {
