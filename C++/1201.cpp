@@ -13,7 +13,8 @@ int main() {
                 // printf("(%d,%d) ", x, y);
                 int min =
                     abs(num - x) > abs(num - y) ? abs(num - y) : abs(num - x);
-                printf("\033[%dm %c \033[m   ",min %cnt+30, min % cnt + 65);
+                // printf("\033[%dm %c \033[m   ",min %cnt+30, min % cnt + 65);
+                printf("%c   ", min % cnt + 65);
             }
             printf("\n\n");
         }
