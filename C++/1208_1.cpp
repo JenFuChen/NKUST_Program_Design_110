@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
+int func, level, cnt;
 void tree(int level) {
     for (int m = 1; m <= 3; m++) {
         for (int i = 0; i < level * m; i++) {
@@ -13,29 +14,53 @@ void tree(int level) {
             printf("\n");
         }
     }
-    return;
+}
+void amulet(int level) {
+    cnt = 2 * level - 1;
+    for (int x = 1; x < 2 * level; x++) {
+        for (int y = 1; y < 2 * level; y++) {
+            if (x == level && y == level) {
+                printf("*");  //中心
+            } else if (x == 1 || x == cnt) {
+                printf("-");  //邊界
+            } else if (y == 1 || y == cnt) {
+                printf("|");  //邊界
+            } else if (x == y && (x + y) != 2 * level) {
+                printf("\\");  //斜線
+            } else if ((x + y) == 2 * level) {
+                printf("/");  //斜線
+            } else if ((x - y) < 0) {
+                if ((x + y) < cnt + 1) {
+                    printf("&");  //上
+                }
+                if ((x + y) > cnt + 1) {
+                    printf("#");  //右
+                }
+            } else if ((x - y) > 0) {
+                if ((x + y) < cnt + 1) {
+                    printf("@");  //左
+                }
+                if ((x + y) > cnt + 1) {
+                    printf("%%");  //下
+                    // cout<<"%";
+                }
+            }
+        }
+        printf("\n");
+    }
 }
 int main() {
     while (1) {
-        int func1, level;
-        scanf("%d %d", &func1, &level);
-        if (func1 > 2 || func1 < 1 || level <= 0) {
+        scanf("%d %d", &func, &level);
+        if (func > 2 || func < 1 || level <= 0) {
             break;
         }
-        if (func1 == 1) {
-            for (int x = 1; x < 2 * level; x++) {
-                for (int y = 1; y < 2 * level; y++) {
-                    printf("(%d,%d)", x, y);
-                    if (x == y) {
-                        printf("\\  ");
-                    }
-                }
-                printf("\n");
-            }
+        if (func == 1) {
+            amulet(level);
         }
-        if (func1 == 2) {
+        if (func == 2) {
             tree(level);
         }
-        return 0;
     }
+    return 0;
 }
