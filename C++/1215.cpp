@@ -2,13 +2,13 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
-int N, S, P, Q, temp, counter, countQ, countP = 0;
-void takeOdd_Even(int N) {
-    P = Q = countQ = countP = 0;
-    while (N != 0) {
-        if (N != 0) {
-            temp = N % 10;
-            N = N / 10;
+int N, S, P, Q, temp, counter, countQ, countP;
+void takeOdd_Even(int num) {
+    P = Q = countQ = countP = counter = 0;
+    while (num != 0) {
+        if (num != 0) {
+            temp = num % 10;
+            num = num / 10;
             // printf("temp = %d\n", temp);
             counter += 1;
         }
@@ -24,13 +24,13 @@ void takeOdd_Even(int N) {
     }
     S = P - Q;
     printf("%d-%d=%d\n", P, Q, S);
-}
-int main() {
-    cin >> N;
-    S = 0;
-    takeOdd_Even(N);
     while (S >= 10) {
         takeOdd_Even(S);
+    }
+}
+int main() {
+    while (cin >> N, N > 0) {
+        takeOdd_Even(N);
     }
     return 0;
 }
