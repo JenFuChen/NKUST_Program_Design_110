@@ -1,5 +1,5 @@
 # README
-C/C++ Python all here
+Since I enroll in NKUST, my code are all here.
 
 ---
 ## MacOS Pyenv環境建置
