@@ -1,3 +1,4 @@
+//使用陣列完成
 #include <math.h>
 #include <stdio.h>
 #include <iostream>
