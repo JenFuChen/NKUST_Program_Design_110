@@ -11,12 +11,10 @@ void takeOdd_Even(int num) {
     string numSize;
     numSize = to_string(num);
     while (num != 0) {
-        if (num != 0) {
-            temp = num % 10;
-            num = num / 10;
-            num_list[counter] = temp;
-            counter += 1;
-        }
+        temp = num % 10;
+        num = num / 10;
+        num_list[counter] = temp;
+        counter += 1;
     }
     for (int i = 0; i < int(numSize.size()); i++) {
         if (i % 2 != 0) {
@@ -28,7 +26,7 @@ void takeOdd_Even(int num) {
     }
     S = P - Q;
     printf("%d-%d=%d\n", P, Q, S);
-    while (S >= 10) {
+    if (S >= 10) {
         takeOdd_Even(S);
     }
 }
