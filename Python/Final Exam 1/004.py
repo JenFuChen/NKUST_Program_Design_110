@@ -1,4 +1,4 @@
-# 未完成
+# 未完成，沒拿分ＱＱ
 
 def box(num):
     for i in range(num):

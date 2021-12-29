@@ -7,11 +7,9 @@ for line in f.readlines():
     num = int(line)
     if(num < 0):
         continue
-    list = np.zeros(num, dtype=int)
     for i in range(num):
         ans = (randint(-100, -1))
-        list[i] = ans
-        print(ans, end=" ")
         sum = sum + ans
+        print(ans, end=" ")
     print(sum)
 f.close()
