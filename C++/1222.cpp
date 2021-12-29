@@ -37,7 +37,8 @@ int main() {
     double N = 0;
     int B = 0, D = 0;
     while (1) {
-        scanf("%lf %d %d", &N, &B, &D);
+        cin >> N >> B >> D;
+        // scanf("%lf %d %d", &N, &B, &D);
         if (N <= 0 || (B <= 1 or B > 36) || (D < 0 or D > 5)) {
             break;
         }
