@@ -6,7 +6,7 @@ def adddocument():
             test = 2
     if(test == 1):
         data.append(active[1:5])
-    # print(data)
+    # print
 
 
 def deletedocument():
