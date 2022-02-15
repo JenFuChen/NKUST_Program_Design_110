@@ -67,6 +67,7 @@
     "code-runner.executorMap": {
         //"c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         //"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt" 原始碼
-        "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
+        "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt",
+        "c": "cd $dir && gcc  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
     }
 }
