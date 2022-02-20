@@ -8,9 +8,7 @@ int main() {
     while (N >= K) {
         sum = sum + (N / K) * W;
         N = (N / K) * W + (N % K);
-        // printf("sum = %d , N = %d , N%%K = %d\n", sum, N, N % K);
     }
-    // printf("========\n");
     printf("%d\n", sum);
     return 0;
 }
