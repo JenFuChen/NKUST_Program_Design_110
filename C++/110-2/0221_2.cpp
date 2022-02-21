@@ -7,9 +7,8 @@ int main() {
     while (scanf("%d", &N)) {
         int cnt = 0;
         newN = N;
-        if (N <= 0) {
+        if (N <= 0)
             break;
-        }
         int list[99] = {0};
         while (N--) {
             scanf("%d", &list[cnt]);
@@ -21,7 +20,7 @@ int main() {
                     temp = list[i];
                     list[i] = list[j];
                     list[j] = temp;
-                  }
+                }
             }
         }
         printf("Minimum value is %d\n", list[newN - 1]);
