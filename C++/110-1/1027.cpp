@@ -1,7 +1,5 @@
 //作業 ０４ ． 輸入三組資料，每筆有九個數值，排序後總和並印出中間值
 #include <stdio.h>
-#include <iostream>
-using namespace std;
 int main() {
     for (int num = 0; num < 3; num++) {
         int min, sum = 0;

@@ -1,7 +1,5 @@
 //０５ min - max 總和 、 乘積
 #include <stdio.h>
-#include <iostream>
-using namespace std;
 int main() {
     int cnt = 0;
     scanf("%d", &cnt);

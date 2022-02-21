@@ -1,6 +1,5 @@
 // 1找出最大，0則最小
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 int main() {
     for (int num = 0; num < 5; num++) {
         int list[4];

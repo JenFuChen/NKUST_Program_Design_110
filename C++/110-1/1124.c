@@ -1,11 +1,8 @@
 #include <stdio.h>
-#include <algorithm>
-#include <iostream>
-using namespace std;
 int main() {
     while (1) {
         int num;
-        cin >> num;
+        scnaf("%d", &num);
         if (num <= 0) {
             break;
         }
