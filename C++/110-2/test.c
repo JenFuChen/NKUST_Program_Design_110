@@ -1,5 +1,5 @@
 // 0221 期初加分作業
-#include <iostream>
+#include <stdio.h>
 
 int main() {
     int N, i = 1, cnt = 0;
