@@ -1,5 +1,7 @@
+// 0221 Addition Test
 #include <stdio.h>
 #include <stdlib.h>
+
 int main() {
     int N, newN, temp;
     while (scanf("%d", &N)) {
@@ -9,11 +11,9 @@ int main() {
             break;
         }
         int list[99] = {0};
-        scanf("%d", &list[0]);
-        N -= 1;
         while (N--) {
-            cnt++;
             scanf("%d", &list[cnt]);
+            cnt++;
         }
         for (int i = 0; i < newN; i++) {
             for (int j = i + 1; j < newN; j++) {
@@ -21,7 +21,7 @@ int main() {
                     temp = list[i];
                     list[i] = list[j];
                     list[j] = temp;
-                }
+                  }
             }
         }
         printf("Minimum value is %d\n", list[newN - 1]);
@@ -31,6 +31,5 @@ int main() {
         }
         printf("\n");
     }
-
     return 0;
 }
