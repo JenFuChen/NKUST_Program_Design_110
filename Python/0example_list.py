@@ -1,28 +1,16 @@
-
-data = []
-size = input()
-size = size.split()
-rowsize = int(size[0])
-colsize = int(size[1])
-
-for i in range(0, rowsize):
-    strarr = input().split()
-    arr = []
-    for j in range (0, colsize):
-        arr.append(int(strarr[j]))
-    print(arr)
-    data.append(arr)
-
-##for i in range (0, rowsize):
-##    arr = []
-##    for j in range (0, colsize):
-##        arr.append(int(input()))
-##    print(arr)
-##    data.append(arr)
-
-print(data)
-
-for i in range (0, rowsize):
-    for j in range (0, colsize):
-        print(data [i][j], end ="\t")
+# rotation test
+from tkinter import *
+window = Tk()
+window.title("test5")
+window.geometry("800x800+700+200")
+n = int(input())
+for i in range(1, 2*n):
+    for j in range(1, 2*n):
+        distx = abs(n-i)  # 絕對座標
+        disty = abs(n-j)
+        Label(window, text=max(distx, disty)+1,
+              font=('Arial', 20)).grid(row=i, column=j)
+        print("{},{}".format(distx, disty), end=' ')
     print()
+
+mainloop()

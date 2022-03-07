@@ -1,6 +1,6 @@
 # 視窗寫法
 from tkinter import *
-
+import pandas
 root = Tk()
 root.title("New Window")  # 視窗標題
 
