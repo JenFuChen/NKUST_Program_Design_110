@@ -1,4 +1,4 @@
-// 
+//
 
 #include <stdio.h>
 #include <string.h>
@@ -16,14 +16,19 @@ int main() {
                 break;
             }
         }
+
+        //如果全部都沒有檢測到 就跳脫
         if (R_token == 1001)
             break;
+
+        //從左算到右的0
         for (int j = 0; j < strlen(num2); j++) {
             if (num2[j] != '0') {
                 L_token = j;
                 break;
             }
         }
+
         for (int i = R_token; i >= L_token; i--) {
             if (num2[i] != '\0') {
                 printf("%c", num2[i]);
