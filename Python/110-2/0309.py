@@ -7,8 +7,9 @@ root.title("Caculator")
 Button_1 = Button()
 contentVar = tkinter.StringVar(root, '')
 
+
 buttonList = [
-    ['C', '/', '*', '-'],
+    ['C', '//', '*', '-'],
     ['7', '8', '9', '+'],
     ['4', '5', '6'],
     ['1', '2', '3', '='],
@@ -19,7 +20,7 @@ def caculateFunc(inputStr):
     operation = ('+', '-', '*', '//')
     content = contentVar.get()
     print("get = ", inputStr, "\n")
-    if(inputStr in '0123456789'):
+    if(inputStr in '0123456789.'):
         content += inputStr
     elif(inputStr in operation):
         content += inputStr
@@ -64,7 +65,7 @@ for i in range(5):
 
         Button_1 = Button(root, text=buttonList[i][j],
                           width=width, height=height,
-                          command=lambda x=get_str: caculateFunc(x))
+                          command=lambda x=get_str: caculateFunc(x), bg="orange")
         Button_1.grid(row=i+1, column=col, rowspan=rowpan, columnspan=colpan)
 
 root.mainloop()
