@@ -4,6 +4,7 @@
 
 int check = 0;  //中斷點
 int total = 0;
+
 void Reverse_Num(char rev[], char list[]) {
     int cnt = 0;
     for (int x = strlen(list) - 1; x >= 0; x--) {
@@ -41,7 +42,7 @@ void addNum(char num1[], char num2[], int sumNum[]) {
             }
         }
     }
-    int carry = 0, newCarry = 0, minLength = strlen(min);
+    int carry = 0, minLength = strlen(min);
     for (int i = 0; i <= strlen(max); i++, minLength--) {
         if (minLength <= 0) {
             if (i != strlen(max)) {
@@ -92,4 +93,4 @@ int main() {
     }
 
     return 0;
-};
+}
