@@ -1,4 +1,4 @@
-//
+// Finished "Reverse the number"
 
 #include <stdio.h>
 #include <string.h>
@@ -6,7 +6,7 @@ int main() {
     while (1) {
         int sum = 0, L_token = 0, R_token = 1001;
         char num2[1001] = {'\0'};
-        scanf("%s", &num2);
+        scanf("%s", num2);
         if (num2[0] == '-')
             break;
         //從右算到左的0
@@ -28,7 +28,8 @@ int main() {
                 break;
             }
         }
-
+        printf("LToken = %d\n", L_token);
+        printf("RToken = %d\n", R_token);
         for (int i = R_token; i >= L_token; i--) {
             if (num2[i] != '\0') {
                 printf("%c", num2[i]);
