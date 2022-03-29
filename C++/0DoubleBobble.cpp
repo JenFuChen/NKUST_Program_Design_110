@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 int main() {
+    // 大到小
     int num, temp, list[10] = {0};
     for (int i = 0; i < 10; i++) {
         scanf("%d", &list[i]);
@@ -14,6 +15,9 @@ int main() {
                 list[j] = temp;
             }
         }
+    }
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", list[i]);
     }
     return 0;
 }
