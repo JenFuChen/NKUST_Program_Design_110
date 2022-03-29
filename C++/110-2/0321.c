@@ -1,3 +1,4 @@
+// HW 3 【Finished】Students' Grade and SchoolID scan
 #include <stdio.h>
 #include <string.h>
 

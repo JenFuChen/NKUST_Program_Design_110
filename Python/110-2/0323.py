@@ -1,4 +1,4 @@
-# ＯＯＸＸ 進化版
+# 【Finished】ＯＯＸＸ 進化版
 from re import I, L
 from tkinter import *
 import tkinter

@@ -1,3 +1,4 @@
+// HW4 【Finished】Build the product data and sort Date 
 #include <stdio.h>
 #include <string.h>
 int token, cnt = 0;

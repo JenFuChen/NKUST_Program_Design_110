@@ -1,4 +1,4 @@
-// 大數運算 加法
+// HW 2 【Finished】Big Num Add Function
 #include <stdio.h>
 #include <string.h>
 

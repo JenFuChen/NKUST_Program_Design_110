@@ -1,4 +1,4 @@
-// Finished "Reverse the number"
+// HW 1 【Finished】Reverse the number
 
 #include <stdio.h>
 #include <string.h>
