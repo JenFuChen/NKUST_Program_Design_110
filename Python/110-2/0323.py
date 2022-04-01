@@ -10,7 +10,7 @@ root = Tk()
 root.title("Caculator")
 Index = Button()
 contentVar = tkinter.StringVar(root, '')
-IndexVar = tkinter.StringVar(root, '')
+#IndexVar = tkinter.StringVar(root, '')
 
 # 顯示運算式按鈕框
 displayButton = Button(root, textvariable=contentVar,
@@ -135,8 +135,8 @@ def winJudge(list):
             sumCol = sumCol + list[j][i]  # 直排相加
             sumSlash_R = sumSlash_R + list[j][j]  # 左斜 \
             sumSlash_L = sumSlash_L + list[j][side-j-1]  # 右斜 /
-        # print("R:", sumRow, "\t C:", sumCol, "\t S_R \ :",
-        #       sumSlash_R, "\t S_L \ :", sumSlash_L)
+        print("R:", sumRow, "\t C:", sumCol, "\t S_R \ :",
+              sumSlash_R, "\t S_L \ :", sumSlash_L)
         if(sumRow == P1_Win or sumCol == P1_Win or sumSlash_L == P1_Win or sumSlash_R == P1_Win) and (player == 2):
             content = "Player " + str(1) + " Win!"
             contentVar.set(content)

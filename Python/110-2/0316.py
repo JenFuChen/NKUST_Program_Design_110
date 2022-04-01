@@ -1,9 +1,7 @@
 # 【Finished】Caculator
 from tkinter import *
 import tkinter
-from aem import con
-
-from sqlalchemy import column
+from tkmacosx import Button
 
 root = Tk()
 root.title("Caculator")

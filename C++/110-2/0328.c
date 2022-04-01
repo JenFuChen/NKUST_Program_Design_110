@@ -1,4 +1,4 @@
-// HW4 【Finished】Build the product data and sort Date 
+// HW4 【Finished】Build the product data and sort Date
 #include <stdio.h>
 #include <string.h>
 int token, cnt = 0;
@@ -23,20 +23,18 @@ void showData(struct data* data, int n) {
             }
         }
         if (n == 5) {  // 輸出所有資料
-            printf("[%d] %d %s %d %d $%.2f\n", i, data[i].ID, data[i].product,
-                   data[i].MFD, data[i].EXP, data[i].price);
+            printf("[%d]\t%d\t%s\t%d\t%d\t$%.2f\n", i, data[i].ID,
+                   data[i].product, data[i].MFD, data[i].EXP, data[i].price);
         }
     }
 }
 
 void addData(struct data* data) {
-    struct data empty = {0, '\0', 0, 0, 0};
+    struct data empty = {0, '\0', 0, 0, 0};  // 輸入錯誤則該項還原為此預設值
     char MFD_temp[990][11], EXP_temp[999][11];  // 有效日期、製造日期暫存器
     int temp = 0, temp2 = 0;
-    scanf("%d %s", &data[cnt].ID, data[cnt].product);
-    scanf("%s", MFD_temp[cnt]);
-    scanf("%s", EXP_temp[cnt]);
-    scanf("%f", &data[cnt].price);
+    scanf("%d %s %s %s %f", &data[cnt].ID, data[cnt].product, MFD_temp[cnt],
+          EXP_temp[cnt], &data[cnt].price);
     for (int i = 0; i < 10; i++) {
         if (i == 4 || i == 7) {
             continue;
@@ -48,26 +46,23 @@ void addData(struct data* data) {
     token = 0;
     data[cnt].MFD = temp;
     data[cnt].EXP = temp2;
-    // 判斷製造日期、有效日期、索引值
     if (data[cnt].MFD >= settingDate || data[cnt].EXP < data[cnt].MFD) {
-        token = 1;
+        token = 1;  // 判斷製造日期、有效日期，錯誤則令token為1
     }
-    if (token == 0) {
+    if (token == 0) {  // 掃描索引值是否重複
         for (int i = 0; i < cnt; i++) {
             if (data[cnt].ID == data[i].ID) {
-                token = 1;
+                token = 1;  // 重複則令token為1
                 break;
             } else {
                 token = 0;
             }
         }
     }
-
     if (token == 1) {
         printf("ErrorInput\n");
-        data[cnt] = empty;  // 清空本次輸入
-    }
-    if (token == 0) {
+        data[cnt] = empty;  // 清空該次輸入
+    } else if (token == 0) {
         cnt++;
     }
 }
