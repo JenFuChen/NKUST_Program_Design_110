@@ -1,21 +1,18 @@
-# Caculator
-from tkinter import *
-import tkinter
+from webbrowser import GenericBrowser
+from winsound import MB_ICONASTERISK
 
-from nbformat import read
 
-root = Tk()
-root.title("Caculator")
-Button_1 = Button()
-contentVar = tkinter.StringVar(root, '')
+list = [[0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, ]]
+list1 = [[0]*3]*5
+print(list1)
 
-# 顯示運算式按鈕框
-displayButton = Button(root, textvariable=contentVar,
-                       width=33, height=3, bg="white")
-displayButton.grid(row=0, column=0, columnspan=4)
+fruits = ['蘋果', '鳳梨', '香蕉']
+print(fruits[0])
+print(fruits)
+for t in fruits:
 
-png_papper = PhotoImage(file=r"./IMG_0730.jpeg")
-papper = Button(image=png_papper)
-papper.bind("<Button-1>")
-
-root.mainloop()
+    print(t)
+for i in range(0, 3):
+    print(fruits[i])
+    

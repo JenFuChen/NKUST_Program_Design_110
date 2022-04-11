@@ -88,7 +88,7 @@ def click(n):
         second = n
         token = 2
         print("Token2 = ", token2, "\tPlace = ", second)
-    if(token1 == token2):
+    if(token1 == token2 and first != second):
         buttonList[first].set('')
         buttonList[second].set('')
         empty[first].config(state="disabled")
@@ -99,7 +99,7 @@ def click(n):
         counter -= 1
         token1 = -1
         token2 = -1
-    elif(token1 != token2 and token == 2):
+    elif((token1 != token2 and token == 2) or first == second):
         empty[first].config(state="normal")
         empty[second].config(state="normal")
         token = 0
@@ -108,6 +108,9 @@ def click(n):
         first = 0
         second = 0
     contentVar.set("剩餘次數："+str(counter))
+    if(counter == 0):
+        contentVar.set("恭喜完成！")
+        reset_btn()
 
 
 root.mainloop()

@@ -1,7 +1,7 @@
 # 【Finished】Caculator
 from tkinter import *
 import tkinter
-from tkmacosx import Button
+#from tkmacosx import Button
 
 root = Tk()
 root.title("Caculator")
