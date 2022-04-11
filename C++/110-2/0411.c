@@ -11,17 +11,19 @@ int main() {
         int Win[5] = {0};       // Winning Lottery
         int Data[99][5] = {0};  // Customer Lottery Num
         int customWin[99][2];
-        scanf("%d", &row);
+        // 輸入資料
+        scanf("%d", &row);  // N筆資料
         getchar();
         if (row <= 0) {
             break;
         }
-        scanf("%[^\n]%*c", winLotteryNum);
+        scanf("%[^\n]%*c", winLotteryNum);  // 中獎號碼
         temp = row;
         while (row--) {
             scanf("%[^\n]%*c", customNum[cnt]);
             cnt++;
         }
+        // 拆解輸入資料並轉換至陣列
         cnt = 0;
         row = temp;
         tokenWin = strtok(winLotteryNum, ", ");
@@ -36,8 +38,6 @@ int main() {
                 Data[i][j] = atoi(tokenCustom);
                 tokenCustom = strtok(NULL, ", ");
             }
-        }
-        for (int i = 0; i < row; i++) {
             for (int j = 0; j < 5; j++) {
                 for (int k = 0; k < 5; k++) {
                     if (Data[i][j] == Win[k]) {
@@ -49,6 +49,9 @@ int main() {
             customWin[i][1] = counter;
             counter = 0;
         }
+        // 計算中獎號碼數量
+        //         1  2  3  4  5 幾個號碼相同對應
+        // token [ 0, 0, 0, 0, 0]
         int token[5] = {0}, tag = 0;
         for (int i = 0; i < row; i++) {
             for (int j = 1; j <= 5; j++) {
@@ -57,6 +60,7 @@ int main() {
                 }
             }
         }
+        // 輸出資料 有Ｎ筆資料 Ｍ個號碼相同 ; i 為 Ｎ
         for (int i = 5; i > 0; i--) {
             if (token[i - 1] > 0) {
                 printf("%d %d\n", token[i - 1], i);
