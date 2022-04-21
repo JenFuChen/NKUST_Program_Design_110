@@ -1,4 +1,5 @@
-# 001 讀檔並加總
+# 001 Read the file and sum the numbers.
+
 f = open("input.txt", mode='r')
 f2 = open("output.txt", mode='r')
 sum = 0

@@ -13,7 +13,7 @@ int main() {
         int customWin[99][2];
         // 輸入資料
         scanf("%d", &row);  // N筆資料
-        getchar();
+        getchar();          // 排除 '\n'
         if (row <= 0) {
             break;
         }
@@ -38,6 +38,7 @@ int main() {
                 Data[i][j] = atoi(tokenCustom);
                 tokenCustom = strtok(NULL, ", ");
             }
+            // 檢查輸入號碼組是否中獎
             for (int j = 0; j < 5; j++) {
                 for (int k = 0; k < 5; k++) {
                     if (Data[i][j] == Win[k]) {
@@ -64,7 +65,7 @@ int main() {
         for (int i = 5; i > 0; i--) {
             if (token[i - 1] > 0) {
                 printf("%d %d\n", token[i - 1], i);
-                tag += 1;
+                tag += 1;  // 判斷是否無中獎號碼，若無則印 "None"
             }
         }
         if (tag == 0) {

@@ -1,18 +1,19 @@
-from webbrowser import GenericBrowser
-from winsound import MB_ICONASTERISK
-
-
-list = [[0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, ]]
-list1 = [[0]*3]*5
-print(list1)
-
-fruits = ['蘋果', '鳳梨', '香蕉']
-print(fruits[0])
-print(fruits)
-for t in fruits:
-
-    print(t)
-for i in range(0, 3):
-    print(fruits[i])
-    
+for M1 in range(1, 10, 2):
+    for M2 in range(1, 10):
+        print(M1, "*", M2, "=", M1*M2, end="\t")
+    print()
+n = 0
+for M1 in range(2, 10, 2):
+    for M2 in range(1, 10, 2):
+        print(M1, "*", M2, "=", M1*M2, end="\t")
+        n = n+1
+        if n == 9:
+            print()
+            n = 0
+for M1 in range(2, 10, 2):
+    for M2 in range(2, 10, 2):
+        print(M1, "*", M2, "=", M1*M2, end="\t")
+        n += 1
+        if n == 9:
+            print()
+            n = 0
