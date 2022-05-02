@@ -119,7 +119,12 @@ def click(n):
     if(counter == 0):
         reset_btn()
 
+def timeReset():
+    global time1
+    print("【 Time Clock-------- 】")
+    time1.start()
 
-time1.start()
+
+timeReset()
 
 root.mainloop()

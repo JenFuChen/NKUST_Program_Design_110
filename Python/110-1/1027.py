@@ -34,3 +34,4 @@ while(1):
         if(BWin > AWin and BWin >= num):
             print("The second person wins the game")
             break
+        
