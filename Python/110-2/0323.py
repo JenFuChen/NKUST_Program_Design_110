@@ -2,9 +2,6 @@
 from re import I, L
 from tkinter import *
 import tkinter
-from aem import con
-from click import command
-from sqlalchemy import column
 
 root = Tk()
 root.title("Caculator")

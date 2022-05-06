@@ -8,6 +8,7 @@ from threading import Timer
 import time
 
 
+
 root = Tk()
 root.title("打地鼠遊戲")
 
@@ -15,7 +16,7 @@ contentVar = tkinter.StringVar(root, '地鼠數量' + '')
 scoreVar = tkinter.StringVar(root, '得分：')
 stageVar = tkinter.StringVar(root, '關卡：' + str(1))
 
-btnWidth  = 500
+btnWidth = 500
 btnHeight = 50
 # 設定顯示文字區
 displayButton = Button(root, fg='white', bg='#3E4149', textvariable=contentVar,
@@ -32,7 +33,7 @@ reset.grid(row=14, column=0, columnspan=10)
 
 scoreBar = Button(root, fg='white', bg='#22843B', textvariable=scoreVar,
 
-                 width=btnWidth, height=btnHeight,)
+                  width=btnWidth, height=btnHeight,)
 scoreBar.grid(row=13, column=0, columnspan=10)
 
 
@@ -47,7 +48,6 @@ score = 0
 stage = 1
 temp = []
 index = []
-
 
 def reset_btn():
     print("Reset----------")
@@ -65,7 +65,6 @@ def reset_btn():
 
 time1 = Timer(2, reset_btn)
 
-
 def layout():
     print("Creating Game----------")
     global empty, buttonList
@@ -76,9 +75,10 @@ def layout():
         col = i % 10
         buttonList.append(StringVar())
         empty.append(Button(root, textvariable=buttonList[i],
-                            width=width, height=height, command=lambda n=i: click(n)))
-        empty[i].grid(row=row+1, column=col)
-
+                            width=width, height=height, command= click(i)))
+       
+    print("Len----------")
+    print(len(buttonList))
 
 layout()
 
@@ -119,11 +119,11 @@ def click(n):
     if(counter == 0):
         reset_btn()
 
+
 def timeReset():
     global time1
     print("【 Time Clock-------- 】")
     time1.start()
-
 
 timeReset()
 
