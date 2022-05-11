@@ -28,14 +28,14 @@ temp = []
 width = 50
 height = 50
 cnt = 0
-pictureList = [r"./For0504/apple.png",
-               "./For0504/betelnut.png",
-               "./For0504/double7.png",
-               "./For0504/grape.png",
-               "./For0504/orange.png",
-               "./For0504/ring.png",
-               "./For0504/star.png",
-               "./For0504/watermelon.png"]
+pictureList = [r"apple.png",
+               r"betelnut.png",
+               r"double7.png",
+               r"grape.png",
+               r"orange.png",
+               r"ring.png",
+               r"star.png",
+               r"watermelon.png"]
 
 # 外框陣列
 squarelist = [0, 1, 2, 3, 4, 5, 6, 7,
@@ -79,7 +79,7 @@ def run():
             cnt += 1
         after = cnt
         empty[squarelist[before]].configure(bg='#FFFFFF')
-        empty[squarelist[after]].configure(bg='#EA5532')
+        empty[squarelist[after]].configure(bg='#EA5560')
 
         # 控制速度
         if(runtimes > 30):

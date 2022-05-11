@@ -16,7 +16,8 @@ reset = Button(root, fg='white', bg='#CD4B1D', text='Reset',
 reset.grid(row=12, column=0, columnspan=10)
 buttonList = []
 empty = []
-
+temp = []
+index = []
 
 def reset_btn():
     global buttonList, empty, token, token2, token1, counter, first, second
@@ -46,8 +47,6 @@ def layout():
 
 
 layout()
-temp = []
-index = []
 # make random list
 
 

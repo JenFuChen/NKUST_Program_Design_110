@@ -1,24 +1,19 @@
-# i = int(input("please input:"))
-# for a in range(i-1, 0, -1):
-#     for b in range(1, i+1):
-#         print(' '*a, '*'*b)
-# num = 10
-# bottom = num * 2 -1
-# space = 0
-# for i in (1,bottom ,2):
-#     space = (bottom + 1) // 2
-# #
-# num = int(input("Please Input: "))
-
-# for i in range(1, num+1):
-#     print(' '*(num-i)+'*'*(2*i-1))
-
-
-for i in range(65, 91):
-    print(chr(i))
-
-print(ord('A'))
-
-data = input("please inpout")
-
-print(ord(data[0]))
+import pyautogui
+import time
+def print_no_newline(string):
+    import sys
+    sys.stdout.write("\r")
+    sys.stdout.write(string)
+    sys.stdout.flush()
+try:
+    while True:
+        x, y = pyautogui.position()
+        pixelColor = pyautogui.screenshot().getpixel((x, y))
+        ss = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
+        ss += ' RGB: (' + str(pixelColor[0]).rjust(3)
+        ss += ', ' + str(pixelColor[1]).rjust(3)
+        ss += ', ' + str(pixelColor[2]).rjust(3) + ')'
+        print_no_newline(ss)
+        #time.sleep(1.0)
+except KeyboardInterrupt:
+    print("\nDone...")
