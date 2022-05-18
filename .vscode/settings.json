@@ -71,5 +71,6 @@
         "cpp": "cd $dir && g++  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt",
         "c": "cd $dir && gcc  $fileName -o ./build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
     },
-    "python.terminal.executeInFileDir": true
+    "python.terminal.executeInFileDir": true,
+    "java.dependency.syncWithFolderExplorer": false
 }

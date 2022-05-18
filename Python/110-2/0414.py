@@ -8,7 +8,6 @@ from threading import Timer
 import time
 
 
-
 root = Tk()
 root.title("打地鼠遊戲")
 
@@ -49,6 +48,7 @@ stage = 1
 temp = []
 index = []
 
+
 def reset_btn():
     print("Reset----------")
     global buttonList, empty, counter, time1, stage
@@ -65,6 +65,7 @@ def reset_btn():
 
 time1 = Timer(2, reset_btn)
 
+
 def layout():
     print("Creating Game----------")
     global empty, buttonList
@@ -75,12 +76,12 @@ def layout():
         col = i % 10
         buttonList.append(StringVar())
         empty.append(Button(root, textvariable=buttonList[i],
-                            width=width, height=height, command= click(i)))
-       
+                            width=width, height=height, command=click(i)))
+
     print("Len----------")
     print(len(buttonList))
 
-layout()
+
 
 
 def random_Num():
@@ -104,7 +105,7 @@ def random_Num():
         index.append(n)
 
 
-random_Num()
+
 
 
 def click(n):
@@ -125,6 +126,9 @@ def timeReset():
     print("【 Time Clock-------- 】")
     time1.start()
 
+
+layout()
 timeReset()
+random_Num()
 
 root.mainloop()
