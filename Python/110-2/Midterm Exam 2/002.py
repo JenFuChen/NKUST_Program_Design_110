@@ -33,7 +33,7 @@ def click(user):
         if(user == 'O'):
             computerWin += 1
         elif(user == 'W'):
-            tie +=1
+            tie += 1
         elif(user == 'Y'):
             userWin += 1
     if(computer == 'Y'):

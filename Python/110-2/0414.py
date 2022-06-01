@@ -41,6 +41,7 @@ reset["font"] = ("arial", 12, "bold")
 displayButton["font"] = ("arial", 12, "bold")
 #stageBar["font"] = ("arial", 12, "bold")
 
+
 buttonList = []
 empty = []
 score = 0
@@ -78,10 +79,8 @@ def layout():
         empty.append(Button(root, textvariable=buttonList[i],
                             width=width, height=height, command=click(i)))
 
-    print("Len----------")
-    print(len(buttonList))
-
-
+    # print("Len----------")
+    # print(len(buttonList))
 
 
 def random_Num():
