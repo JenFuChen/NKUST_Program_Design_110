@@ -50,10 +50,10 @@ Label(root, text='地址：', height=height,
       width=width).grid(column=0, row=4)
 Label(root, text=' 電話：', height=height,
       width=width).grid(column=0, row=5)
-before = Button(root, text=' 前一筆', height=50,
-                width=100, command=lambda: next(1)).place(x=20, y=230)
-after = Button(root, text='下一筆', height=50,
-               width=100, command=lambda: next(2)).place(x=130, y=230)
+before = Button(root, text='<<', height=50,
+                width=50, command=lambda: next(1)).place(x=20, y=230)
+after = Button(root, text='>>', height=50,
+               width=50, command=lambda: next(2)).place(x=130, y=230)
 # reload = Button(root, text='重新載入資料', height=50,
 #                 width=210, command=lambda: loading()).place(x=20, y=290)
 schoolID = Entry(root)
@@ -69,7 +69,6 @@ female.grid(column=1, row=2)
 type.grid(column=1, row=3)
 address.grid(column=1, row=4)
 phone.grid(column=1, row=5)
-
 
 
 def next(token):
