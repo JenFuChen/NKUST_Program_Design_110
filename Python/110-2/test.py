@@ -1,8 +1,7 @@
-f = open('input.txt', 'r+')
-playersScore = 1
-oldscore = (f.read())
-oldscore = int(oldscore)
-score = oldscore + playersScore
-f.seek(0)
-f.write(str(score))
-f.close()
+from math import *
+i = 1
+B = float(input("B="))
+r = float(input("a="))
+theda = 30
+F = i * 2 * pi * r * B * sin(radians(theda))
+print(f"ans={F}")

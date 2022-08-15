@@ -7,22 +7,8 @@ import tkinter as tk
 root = Tk()
 root.title('資料表')
 root.geometry("250x300")
-'''
-# def loading():
-#     global data
-#     data = []
-#     f = open('input.txt', mode='r')
-#     data = f.read().splitlines()
-#     f.close()
-#     for i in range(len(data)):
-#         data.insert(i, data[i].split(' '))
-#         if(i != len(data)):
-#             data.pop(i+1)
-'''
 
 # Dealing Data
-
-# data = list()
 
 
 def loadData():
