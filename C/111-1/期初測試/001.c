@@ -1,5 +1,6 @@
 #include <stdio.h>
 // 35%
+// 0912 加分題
 int main() {
     int min = 100000000, inputNum = 0, N = 0;
     while (1) {

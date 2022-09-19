@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// 0912 加分題
 int main() {
     while (1) {
         int N = 0, cnt = 0, check = 0;

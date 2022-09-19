@@ -61,7 +61,11 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "__bits": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "variant": "cpp"
     },
     //"editor.fontSize": 18,
     "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}", //大括號不換行！
