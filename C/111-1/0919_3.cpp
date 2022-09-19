@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
-
+// 64%
 int main() {
     while (1) {
         char S1[999] = {'\0'}, old[1] = {'\0'}, newC[2] = {'\0'};
