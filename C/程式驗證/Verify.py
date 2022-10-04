@@ -1,8 +1,3 @@
-x = 0
-cnt = 1
-failed = []
-error = 0
-
 
 '''
 把這兩行加在主程式最上面，就會自己吃資料然後吐出來
@@ -19,6 +14,9 @@ class bcolors:
     RESET = '\033[0m'  # RESET COLOR
 
 
+cnt = 1
+failed = []
+
 print(end='', file=open("verify_result.txt", "w"))
 with open('answer_output.txt', 'r') as answer:
     with open('user_output.txt', 'r') as test:
@@ -31,16 +29,13 @@ with open('answer_output.txt', 'r') as answer:
                 print(text, file=open("verify_result.txt", "a"))
                 print(bcolors.FAIL + text + bcolors.RESET)
                 failed.append(cnt)
-                x = 1
-                error += 1
             else:
                 text = '【No.' + str(cnt) + '】 PASS'
                 print(text, file=open("verify_result.txt", "a"))
                 print(bcolors.OK + text + bcolors.RESET)
             cnt += 1
-        if (x == 1):
-            text = 'The Output Has ' + str(error)+' Problems'
-
+        if (len(failed) != 0):
+            text = 'The Output Has ' + str(len(failed))+' Problems'
             print(text, file=open("verify_result.txt", "a"))
             print(bcolors.WARNING + text + bcolors.RESET)
             print('Failed In No.' + str(failed),

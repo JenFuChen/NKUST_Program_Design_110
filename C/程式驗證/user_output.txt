@@ -13,6 +13,6 @@ not prime
 not prime
 not prime
 emirp
-not prime
-not prime
+15145
+2020250
 not prime

@@ -5,19 +5,16 @@ void replace(char* sentence, char* goal, char* newWord, int cnt) {
     int newWLen = strlen(newWord);
     char answer[9999] = {'\0'};
     strcat(answer, *(sentence + 0));  // this is a pen or is a apple.is a pen'\0
-    if (strstr()) {
-        sentence + 5;
-        sentence = '\0';
-        strcat(answer, newWord);
-    } else {
-        strcat(answer, newWord);
-    }
+    // if (strstr()) {
+    //     sentence + 5;
+    //     sentence = '\0';
+    //     strcat(answer, newWord);
+    // } else {
+    //     strcat(answer, newWord);
+    // }
 }
 
-void insert() {
-    
-
-}   
+void insert() {}
 int main() {
     int order = 0, cnt = 0;
     char* tokenStr;                    // 切句子的指標token

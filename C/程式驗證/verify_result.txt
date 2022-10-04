@@ -13,7 +13,8 @@
 【No.13】 PASS
 【No.14】 PASS
 【No.15】 PASS
-【No.16】 PASS
-【No.17】 PASS
+【No.16】 FAIL	Your Output：15145	Correct output：not prime
+【No.17】 FAIL	Your Output：2020250	Correct output：not prime
 【No.18】 PASS
-! ALL PASS !
+The Output Has 2 Problems
+Failed In No.[16, 17]
