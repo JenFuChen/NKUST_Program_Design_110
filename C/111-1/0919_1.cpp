@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// 42%
+// Done: 42 % similar to others'
 /*======<格式化輸出>=======*/
 void is_int(int x) {
     printf("%d\n", x);
