@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-// Judge is the prime or not
+// Judge input num is the prime or not
 // Done: 13 % similar to others'
 
 int reverse(int N) {

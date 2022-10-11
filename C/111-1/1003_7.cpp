@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <iostream>
 // Done: 11 % similar to others'
-// This HW is about count the score of each player's card
+// Count the score of each player's card
 
 int main() {
     while (1) {
