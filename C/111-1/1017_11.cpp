@@ -3,9 +3,10 @@
 #include <string.h>
 #include <algorithm>
 #include <iostream>
+
 using namespace std;
-// Finished 1018
-// Done: 23 % similar to others' ! ==...
+// Done  : 1018
+// Result: 23 % similar to others' ! ==...
 
 int convertToDec(char* num, int B) {
     int result = 0, getNum = 0;
