@@ -38,11 +38,11 @@ void convertToOrderNum(int N, int B) {
 }
 int main() {
     int sum = 0;
-    while (true) {
+    char order[99] = {'\0'};  // input selected function
+    while (scanf("%s", order) != EOF) {
         int base, toBase = 0;
         // base: input adding number's radix
         // toBase: input showing number's radix
-        char order[99] = {'\0'};  // input selected function
         char num[9999] = {'\0'};  // input num to view as string
         scanf("%s", order);
         if (strcmp(order, "Add") == 0) {  // Keep adding the input number
