@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// Encryption the string
+// Encryption the word by displacement
 // Done  : 1031
 // Result: 38 % similar to others' ! ==... !!!!!!
 int main() {
