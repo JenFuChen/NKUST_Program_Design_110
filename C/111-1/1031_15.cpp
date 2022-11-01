@@ -10,6 +10,8 @@ int main() {
         char encryption[99][4][99] = {'\0'};
         // [n][0] store the encrypted word
         // [n][1] store the word which gonna be encrypted
+        // [n][2] store the word with "," which gonna be encrypted
+        // [n][3] store the word with "." which gonna be encrypted
         char input[999] = {'\0'};  // store input sentence
         char inputCopy[999] = {'\0'};
         char separateInput[999][999] = {
@@ -24,7 +26,6 @@ int main() {
             strcat(encryption[i][2], ",");
             strcpy(encryption[i][3], encryption[i][1]);
             strcat(encryption[i][3], ".");
-            // printf("[ %s, %s ]\n", encryption[i][0], encryption[i][1]);
             getchar();
         }
         scanf("%[^\n]%*c", input);

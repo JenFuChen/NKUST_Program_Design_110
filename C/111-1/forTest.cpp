@@ -1,69 +1,26 @@
-#include <iomanip>
-#include <iostream>
-#include <map>
-#include <vector>
-using namespace std;
-int main() {
-    int S, N;  // S=科目數,N=學生數
+// Template for SDCC 8051 C program
+
+#include <8051.h>  // Defining SFRs
+
+// ISR Prototypes ===================================================
+void INT0_ISR(void) __interrupt 0;  // ISR for External Interrupt 0
+void T0_ISR(void) __interrupt 1;  // ISR for Timer0/Counter0 Overflow Interrupt
+void INT1_ISR(void) __interrupt 2;  // ISR for External Interrupt 1
+void T1_ISR(void) __interrupt 3;  // ISR for Timer1/Counter1 Overflow Interrupt
+void UART_ISR(void) __interrupt 4;  // ISR for UART Interrupt
+
+void main(void) {
+    int i = 0;
     while (1) {
-        map<int, vector<float> > student_grade;
-        cin >> S >> N;
-        if (N <= 0 || S <= 0) {
+        i = i + 1;
+        if (i > 10) {
             break;
         }
-        int index = 1;
-        vector<string> subject(S);
-        for (int i = 0; i < S; i++) {
-            cin >> subject[i];
-        }
-        vector<float> Vector;
-        float tmp;
-        //資料輸入
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < S; j++) {  //科目
-                cin >> tmp;
-                Vector.push_back(tmp);
-            }
-            //將成績平均(個人)
-            float average = 0;
-            for (int j = 0; j < Vector.size(); j++) {
-                average += Vector[j];
-            }
-            average /= Vector.size();
-            Vector.push_back(average);
-            student_grade[i] = Vector;
-            Vector.clear();
-        }
-
-        cout << "學生編號"
-             << " ";
-        for (int i = 0; i < S; i++) {
-            cout << subject[i] << " ";
-        }
-        cout << "學生平均" << endl;
-        //按照學生編號輸出成績
-        for (int i = 0; i < N; i++) {
-            cout << index << " ";
-            for (int j = 0; j < S; j++) {
-                cout << setprecision(0) << fixed << student_grade[i][j] << " ";
-            }
-            float student_average = student_grade[i][S];
-            cout << setprecision(2) << fixed << student_average;
-            cout << endl;
-            index++;
-        }
-        //輸出各科平均
-        cout << "各科平均"
-             << " ";
-        for (int j = 0; j < S; j++) {
-            float subject_average = 0;
-            for (int i = 0; i < N; i++) {
-                subject_average += student_grade[i][j];
-            }
-            subject_average /= N;
-            cout << setprecision(2) << fixed << subject_average << " ";
-        }
-        cout << endl;
     }
-    return 0;
 }
+
+void INT0_ISR(void) __interrupt 0 {}
+void T0_ISR(void) __interrupt 1 {}
+void INT1_ISR(void) __interrupt 2 {}
+void T1_ISR(void) __interrupt 3 {}
+void UART_ISR(void) __interrupt 4 {}
