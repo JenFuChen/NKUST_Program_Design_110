@@ -36,6 +36,7 @@ void convertToOrderNum(int N, int B) {
     cout << result << endl;
     // printf("===== End =====\n");
 }
+
 int main() {
     int sum = 0;
     char order[99] = {'\0'};  // input selected function

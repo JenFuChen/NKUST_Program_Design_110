@@ -1,26 +1,66 @@
-// Template for SDCC 8051 C program
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
 
-#include <8051.h>  // Defining SFRs
+using namespace std;
 
-// ISR Prototypes ===================================================
-void INT0_ISR(void) __interrupt 0;  // ISR for External Interrupt 0
-void T0_ISR(void) __interrupt 1;  // ISR for Timer0/Counter0 Overflow Interrupt
-void INT1_ISR(void) __interrupt 2;  // ISR for External Interrupt 1
-void T1_ISR(void) __interrupt 3;  // ISR for Timer1/Counter1 Overflow Interrupt
-void UART_ISR(void) __interrupt 4;  // ISR for UART Interrupt
+char dataIn[1000];
+int start[1000], ans[1000], res[1000];
 
-void main(void) {
-    int i = 0;
-    while (1) {
-        i = i + 1;
-        if (i > 10) {
-            break;
+const int oldBase = 10;
+int newBase = 0;
+
+void toNum() {
+    int i, len = strlen(dataIn);
+    start[0] = len;
+    for (i = 1; i <= len; i++) {
+        if (dataIn[i - 1] >= '0' && dataIn[i - 1] <= '9') {
+            start[i] = dataIn[i - 1] - '0';
         }
     }
 }
 
-void INT0_ISR(void) __interrupt 0 {}
-void T0_ISR(void) __interrupt 1 {}
-void INT1_ISR(void) __interrupt 2 {}
-void T1_ISR(void) __interrupt 3 {}
-void UART_ISR(void) __interrupt 4 {}
+void converter() {
+    memset(res, 0, sizeof(res));
+    int y, i, j;
+    while (start[0] >= 1) {
+        y = 0;
+        i = 1;
+        ans[0] = start[0];
+        while (i <= start[0]) {
+            y = y * oldBase + start[i];
+            ans[i++] = y / newBase;
+            y %= newBase;
+        }
+        res[++res[0]] = y;
+        i = 1;
+        while ((i <= ans[0]) && (ans[i] == 0))
+            i++;
+        memset(start, 0, sizeof(start));
+        for (j = i; j <= ans[0]; j++)
+            start[++start[0]] = ans[j];
+        memset(ans, 0, sizeof(ans));
+    }
+}
+void convertToOrderNum(int N, int B) {
+    int getNum = 0;
+    string result = "";
+    while (N != 0) {
+        getNum = (N % B <= 9) ? (N % B + '0') : (N % B + 'A' - 10);
+        result += getNum;
+        N /= B;
+    }
+    reverse(result.begin(), result.end());
+    cout << result;
+}
+
+int main() {
+    scanf("%s %d", dataIn, &newBase);
+    toNum();
+    converter();
+    for (int i = res[0]; i >= 1; --i) {
+        convertToOrderNum(res[i], newBase);
+    }
+    printf("\n");
+    return 0;
+}
