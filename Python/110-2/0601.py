@@ -22,7 +22,7 @@ def loadData():
         data.insert(i, data[i].split(' '))
         if(i != len(data)):
             data.pop(i+1)
-    print(data)
+    print(data) 
 ##########
 
 

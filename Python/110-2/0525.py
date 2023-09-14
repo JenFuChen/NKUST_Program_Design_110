@@ -11,7 +11,7 @@ root.geometry("250x300")
 #     global data
 #     data = []
 #     f = open('input.txt', mode='r')
-#     data = f.read().splitlines()
+#     data = f.read().splitlines() 
 #     f.close()
 #     for i in range(len(data)):
 #         data.insert(i, data[i].split(' '))
