@@ -23,3 +23,4 @@ while 1:
         if isPrime == 1 and x != num:
             print(x)
             break
+

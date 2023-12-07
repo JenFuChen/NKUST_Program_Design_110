@@ -36,7 +36,7 @@ int BinarySearch(int list[], int target, int left, int right) {
 int main(void) {
     int i, n;
     int list[MAX_SIZE];
-    printf("Enter the number of numbers to generate: ");
+    printf("｜Enter the number of numbers to generate: ");
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
@@ -45,7 +45,7 @@ int main(void) {
     }
 
     sort(list, n);
-    printf("\n Sorted Array \n");
+    printf("\n｜Sorted Array \n");
     for (int i = 0; i < n; i++) {
         printf("%d ", list[i]);
     }
