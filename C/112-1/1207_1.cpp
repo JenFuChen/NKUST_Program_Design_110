@@ -109,38 +109,31 @@ int main() {
     E->data = 38;
     E->left = NULL;
     E->right = NULL;
-    treePointer root = A;
 
-    // // 將 A的 left 指向 C, right 指向 B
-    A->left = C;
-    A->right = B;
-    // // 將 C 的 right 指向 D
-    C->right = D;
-    // // 將 B的 left 指向 E
-    B->left = E;
-    // // 宣告一個 TreePointer root 並指向 A
-
-    // 二分搜尋樹
+    // 建立自動二分搜尋樹
+    // 宣告一個 TreePointer btree, 並設為 NULL
+    treePointer BTree = NULL;
+    // 呼叫 insertBStree(), 將 E 放入 二分搜尋樹btree
+    insertBStree(&BTree, E);
+    // 呼叫 insertBStree(), 將 D 放入 二分搜尋樹 btree
+    insertBStree(&BTree, D);
+    // 呼叫 insertBStree(), 將 C 放入 二分搜尋樹 btree
+    insertBStree(&BTree, C);
+    // 呼叫 insertBStree(), 將 A 放入 二分搜尋樹 btree
+    insertBStree(&BTree, A);
+    // 呼叫 insertBStree(), 將 B 放入 二分搜尋樹 btree
+    insertBStree(&BTree, B);
     printf("\nNAME\tDATA\tPOSITION\tLEFT\t\tRIGHT\n");
     printf("-------------------------------------------------------------\n");
-    printf("A\t%d\t%p\t%p\t%p\n", A->data, A, A->left, A->right);
-    printf("B\t%d\t%p\t%p\t%p\n", B->data, B, B->left, B->right);
+    printf("A\t%d\t%p\t%p\t\t%p\n", A->data, A, A->left, A->right);
+    printf("B\t%d\t%p\t%p\t\t%p\n", B->data, B, B->left, B->right);
     printf("C\t%d\t%p\t%p\t\t%p\n", C->data, C, C->left, C->right);
-    printf("D\t%d\t%p\t%p\t\t%p\n", D->data, D, D->left, D->right);
-    printf("E\t%d\t%p\t%p\t\t%p\n", E->data, E, E->left, E->right);
+    printf("D\t%d\t%p\t%p\t%p\n", D->data, D, D->left, D->right);
+    printf("E\t%d\t%p\t%p\t%p\n", E->data, E, E->left, E->right);
     printf("-------------------------------------------------------------\n");
-    printf("\nSEARCH\n");
-
-    // 呼叫 search() 搜尋 root裡面有無 27 , printf 回傳指標 p 以及*p
-    int* target = search(root, 27);
-    printf("< %d, %p >\n", *target, target);
-    // 呼叫  iterSearch() 搜尋 tree裡面有無 38, printf 回傳指標 p 以及*p
-    target = iterSearch(root, 38);
-    printf("< %d, %p >\n", *target, target);
-    // 呼叫  iterSearch() 搜尋 tree裡面有無 100, printf 回傳指標 p 以及*p
-    // target = iterSearch(root, 100);
-    // printf("< %d, %p >\n", *target, target);
-
-    printf("\n");
+    // 呼叫 inOrder(), 將 BTree的所有節點走一遍
+    printf("\n中序走訪\n");
+    inOrder(BTree);
+    printf("\n\n");
     return 0;
 }

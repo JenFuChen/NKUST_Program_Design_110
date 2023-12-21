@@ -94,10 +94,6 @@ int pop2() {
 int getToken(char* symbol, int* n) {
     *symbol = postfix[(*n)++];
     switch (*symbol) {
-        case '(':
-            return 5;
-        case ')':
-            return 6;
         case '+':
             return 1;
         case '-':
@@ -106,6 +102,10 @@ int getToken(char* symbol, int* n) {
             return 3;
         case '/':
             return 4;
+        case '(':
+            return 5;
+        case ')':
+            return 6;
         case '\0':
             return 0;  // eos
         default:
