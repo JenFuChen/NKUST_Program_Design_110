@@ -21,3 +21,13 @@ cv2.imshow("can1",can1)
 cv2.imshow("can2",can2) 
 cv2.imshow("gray",th)
 cv2.waitKey(0)
+
+
+0:R(ed)
+1:G(reen)
+2:Y(ellow)
+3:B(lue)
+4:in taxi
+
+
+
